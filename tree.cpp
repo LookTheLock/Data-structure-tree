@@ -1,5 +1,12 @@
 #include "tree.h"
 
+void tree_walk(node<int> &root){
+	cout << root.m_id << endl;
+	for (shared_ptr<node<int>> child : root.m_children) {
+		tree_walk(*child);
+	}
+}
+
 int main()
 {
 	int a = 5;
@@ -23,6 +30,7 @@ int main()
 	root.m_children[0]->m_children[1]->add_child(make_shared<node<int>>(g, 7));
 	root.m_children[0]->m_children[1]->add_child(make_shared<node<int>>(h, 8));
 
+	tree_walk(root);
 
 
 	return 0;
