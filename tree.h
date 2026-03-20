@@ -15,7 +15,7 @@ struct node
 	shared_ptr<node> m_parent;
 
 
-	node(T& data, int id, shared_ptr<node> parent):m_data(data), m_id(id), m_parent(parent){}
+	node(T& data, int id):m_data(data), m_id(id) {}
 
 	void add_child(shared_ptr<node> child) {
 		m_children.push_back(child);
