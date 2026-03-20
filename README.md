@@ -1,7 +1,7 @@
 # How to make a tree?
 
-		   root
-		 /       \
+			   root
+			 /       \
 	       node     node
 	       / \       / \
 	    node node node node
